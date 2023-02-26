@@ -11,7 +11,7 @@ const Cashout = () => {
     let outcashtask = { cashout, Time };
     setoutcashtasks([...outcashtasks, outcashtask]);
     // console.log(cashout);
-    Navigate('/Cashbook/' + Books)
+    Navigate('/Cashbook/Transaction')
   }
 
   return (

@@ -4,7 +4,7 @@ import { BookData } from '../context/Datacontext'
 const Entries = () => {
   const { Cashtasks, outcashtasks } = useContext(BookData);
 
-  let cashTaskList = <h5>No Entries have been passed yet!</h5>;
+  let cashTaskList = <h5></h5>;
   let outCashTaskList = <h5></h5>;
   if (Cashtasks.length > 0) {
     cashTaskList = Cashtasks.map((cashtask, indx) => {
