@@ -3,12 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BookData } from "../context/Datacontext";
 
 const Addnewbook = () => {
-    const { Books, setBooks, Tasks, setTasks } = useContext(BookData);
+    const { Books, setBooks, Tasks, setTasks, cashin } = useContext(BookData);
     const navigate = useNavigate();
 
     const bookSubmitHandler = (e) => {
         e.preventDefault();
-        const task = { Books };
+        const task = { Books, cashin };
         setTasks([...Tasks, task]);
         setBooks("");
         // console.log(task);

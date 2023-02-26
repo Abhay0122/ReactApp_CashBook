@@ -9,7 +9,10 @@ const Home = () => {
     if (Tasks.length > 0) {
         tasklist = Tasks.map((task, indx) => {
             return (
-                <li key={indx}>{task.Books}</li>
+                <div className='w-100 mb-3 p-3 border border-dark rounded d-flex justify-content-between align-items-center'>
+                    <h6 key={indx} className="text-capitalize">{task.Books}</h6>
+                    <h6>{task.cashin}</h6>
+                </div>
             )
         })
     }

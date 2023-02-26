@@ -8,7 +8,7 @@ const Cashin = () => {
 
   const cashinHandler = (e) => {
     e.preventDefault();
-    const CashTask = { cashin, Time };
+    const CashTask = { cashin, Time,};
     setCashtasks([...Cashtasks, CashTask]);
     // console.log(CashTask);
     Navigate('/Cashbook/' + Books);
