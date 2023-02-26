@@ -4,11 +4,13 @@ import { BookData } from '../context/Datacontext';
 
 const Cashout = () => {
   const Navigate = useNavigate();
-  const { Books, cashout, setcashout } = useContext(BookData);
+  const { Books, cashout, setcashout, outcashtasks, setoutcashtasks, Time } = useContext(BookData);
 
   const cashoutHandler = (e) => {
     e.preventDefault();
-    console.log(cashout);
+    let outcashtask = { cashout, Time };
+    setoutcashtasks([...outcashtasks, outcashtask]);
+    // console.log(cashout);
     Navigate('/Cashbook/' + Books)
   }
 
@@ -16,7 +18,7 @@ const Cashout = () => {
     <div>
       <form
         onSubmit={cashoutHandler}
-        style={{ width: "500px", marginTop:"5vmax" }}
+        style={{ width: "500px", marginTop: "5vmax" }}
         className='container shadow-lg mt-5 p-3'
       >
         <div className="mb-4">

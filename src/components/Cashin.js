@@ -4,11 +4,14 @@ import { BookData } from "../context/Datacontext"
 
 const Cashin = () => {
   const Navigate = useNavigate();
-  const { cashin, setcashin, Books } = useContext(BookData);
+  const { cashin, setcashin, Books, Cashtasks, setCashtasks, Time, } = useContext(BookData);
 
   const cashinHandler = (e) => {
     e.preventDefault();
-    Navigate('/Cashbook/' + Books)
+    const CashTask = { cashin, Time };
+    setCashtasks([...Cashtasks, CashTask]);
+    // console.log(CashTask);
+    Navigate('/Cashbook/' + Books);
   }
 
   return (

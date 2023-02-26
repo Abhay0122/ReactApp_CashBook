@@ -11,7 +11,7 @@ const Addnewbook = () => {
         const task = { Books };
         setTasks([...Tasks, task]);
         setBooks("");
-        console.log(task);
+        // console.log(task);
         navigate('/Cashbook/' +  Books);
     }
 
