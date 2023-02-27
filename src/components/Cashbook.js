@@ -11,7 +11,7 @@ const Cashbook = () => {
     // console.log(params, location);
 
     return (
-        <div className='container'>
+        <div className='container p-5'>
             <header className='nav d-flex align-itesm-center border-bottom'>
                 <Link className='text-decoration-none text-danger' to='/'>
                     <h4 className='me-5 fs-4'> &#10094;</h4>
@@ -26,7 +26,7 @@ const Cashbook = () => {
             </div>
             <div
                 style={{ width: "500px" }}
-                className='mt-5 container d-flex justify-content-between align-items-center'
+                className='mt-4 container d-flex justify-content-between align-items-center'
             >
                 <Link to="/Cashin" className='btn btn-success shadow-lg'>
                     + CASH IN
